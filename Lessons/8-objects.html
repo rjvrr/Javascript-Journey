@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*const product = {
+      name: 'socks',
+      cost: 1090
+    };
+    console.log(product);
+    console.log(product.name);
+
+    product.name="t-shirt";
+    console.log(product);
+
+    product.newField = "new";
+    console.log(product);
+
+    delete product.newField;
+    console.log(product);
+
+    console.log(product['name']);*/
+
+    /*const obj={
+      Name: "Anil",
+      Age: "39",
+      Family:{ //object inside object
+        Son: "Aman", 
+        Wife: "Suman"
+      },
+      fun : function greet(){ //function inside object i.e method
+        console.log("helloo!");
+      }
+    }
+    console.log(obj);
+    console.log(obj["Family"]['Son']); //to access object inside object
+    obj.fun(); //to access function inside object*/
+
+    /*JSON 
+    1-> JSON.stringify(object) string me convert krta hai
+    2-> JSON.parse(object) wapas reverse krr deta hai
+    */
+
+    /*jab hum refresh krte h kisi page to data refresh nhi hota, vo krne k liye use localStorage.setItem('variable', string) to store and localStorage.getItem('variable', prev datatype) to get it*/
+
+    const object1={
+      message: 'hey'
+    }
+    const {message} = object1; //takes message out of object1 and saves in a variable message
+    console.log(message);
+
+    const object2={
+      //message: message
+      message, 
+      /*func: function sayHello(){
+        console.log("helloo!");
+      }*/
+      func(){
+        console.log("helloo!");
+      }
+    }
+    console.log(object2);
+    object2.func();
+  </script>
+  
+</body>
+</html>
