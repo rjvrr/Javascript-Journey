@@ -27,28 +27,38 @@
   </button>
 
   <script>
+    const score = {Win : 0 , Lost : 0 , Tie : 0 };
     function pickmove(){
       const comp = Math.random()
       compmove='';
+      
       if(comp>=0 && comp<1/3){compmove='rock'}
       else if(comp>=1/3 && comp<2/3){compmove='paper'}
       else{compmove='scissors'}
     }
 
     function result_if_rock(){
-      if(compmove==='rock'){alert('That\'s a tie as computer choose rock')}
-      else if(compmove==='paper'){alert('oops! you lost as computer choose paper')}
-      else{alert('congrats! you won as computer choose scissor')}
+      if(compmove==='rock'){score.Tie = score.Tie +1 ; alert(`That\'s a tie as computer choose rock \n Score-->   Win: ${score.Win} , Lost: ${score.Lost} , Tie: ${score.Tie}`)}
+
+      else if(compmove==='paper'){score.Lost = score.Lost +1 ; alert(`oops! you lost as computer choose paper \n Score--->    Win: ${score.Win} , Lost: ${score.Lost} , Tie: ${score.Tie}`)}
+
+      else{score.Win = score.Win+1; alert(`congrats! you won as computer choose scissor \n Score--->    Win: ${score.Win} , Lost: ${score.Lost} , Tie: ${score.Tie}`)}
+
     }
     function result_if_paper(){
-      if(compmove==='rock'){alert('congrats! you won as computer choose rock')}
-      else if(compmove==='paper'){alert('That\' a tie as computer choose paper')}
-      else{alert('oops! you lost as computer choose scissors')}
+      if(compmove==='rock'){score.Win = score.Win+1; alert(`congrats! you won as computer choose rock \n Score-->   Win: ${score.Win} , Lost: ${score.Lost} , Tie: ${score.Tie}`)}
+
+      else if(compmove==='paper'){score.Tie = score.Tie +1 ; alert(`That\' a tie as computer choose paper \n Score-->   Win: ${score.Win} , Lost: ${score.Lost} , Tie: ${score.Tie}`)}
+
+      else{score.Lost = score.Lost +1 ; alert(`oops! you lost as computer choose scissors \n Score-->   Win: ${score.Win} , Lost: ${score.Lost} , Tie: ${score.Tie}`)}
+
     }
     function result_if_scissors(){
-      if(compmove==='rock'){alert('oops! you lost as computer choose rock')}
-      else if(compmove==='paper'){alert('congrats! you won as computer choose paper')}
-      else{alert('That\' a tie as computer choose scissors')}
+      if(compmove==='rock'){score.Lost = score.Lost +1 ; alert(`oops! you lost as computer choose rock \n Score-->   Win: ${score.Win} , Lost: ${score.Lost} , Tie: ${score.Tie}`)}
+
+      else if(compmove==='paper'){score.Win = score.Win+1; alert(`congrats! you won as computer choose paper \n Score-->   Win: ${score.Win} , Lost: ${score.Lost} , Tie: ${score.Tie}`)}
+
+      else{score.Tie = score.Tie +1 ; alert(`That\' a tie as computer choose scissors \n Score-->   Win: ${score.Win} , Lost: ${score.Lost} , Tie: ${score.Tie}`)}
     }
   </script>
   
