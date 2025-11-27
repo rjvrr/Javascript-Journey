@@ -11,41 +11,45 @@
     Rock Paper Scissors
   </p>
 
-  <button onclick="const computer = Math.random(); 
-    let compmove='';
-    if (computer>=0 && computer<1/3){ compmove = 'rock'} 
-    else if(computer>=1/3 && computer<2/3){ compmove = 'paper'} 
-    else{compmove='scissors'}
-    if(compmove==='rock'){alert('That\'s a tie as computer choose rock')}
-    else if(compmove==='paper'){alert('oops! you lost as computer choose paper')}
-    else{alert('congrats! you won as computer choose scissor')}">
+  <button onclick="pickmove();
+    result_if_rock();">
     Rock
   </button>
 
-  <button onclick="const comp = Math.random()
-    compmove='';
-    if(comp>=0 && comp<1/3){compmove='rock'}
-    else if(comp>=1/3 && comp<2/3){compmove='paper'}
-    else{compmove='scissors'}
-    if(compmove==='rock'){alert('congrats! you won as computer choose rock')}
-    else if(compmove==='paper'){alert('That\' a tie as computer choose paper')}
-    else{alert('oops! you lost as computer choose scissors')}">
+  <button onclick=" pickmove();
+    result_if_paper();">
     Paper
   </button>
   
-  <button onclick="const com = Math.random()
-    compmove=''
-    if(com>=0 && com<1/3){compmove='rock'}
-    else if(com>=1/3 && com<2/3){compmove='paper'}
-    else{compmove='scissors'}
-    if(compmove==='rock'){alert('oops! you lost as computer choose rock')}
-    else if(compmove==='paper'){alert('congrats! you won as computer choose paper')}
-    else{alert('That\' a tie as computer choose scissors')}">
+  <button onclick="pickmove();
+    result_if_scissors();">
     Scissors
   </button>
 
   <script>
-    
+    function pickmove(){
+      const comp = Math.random()
+      compmove='';
+      if(comp>=0 && comp<1/3){compmove='rock'}
+      else if(comp>=1/3 && comp<2/3){compmove='paper'}
+      else{compmove='scissors'}
+    }
+
+    function result_if_rock(){
+      if(compmove==='rock'){alert('That\'s a tie as computer choose rock')}
+      else if(compmove==='paper'){alert('oops! you lost as computer choose paper')}
+      else{alert('congrats! you won as computer choose scissor')}
+    }
+    function result_if_paper(){
+      if(compmove==='rock'){alert('congrats! you won as computer choose rock')}
+      else if(compmove==='paper'){alert('That\' a tie as computer choose paper')}
+      else{alert('oops! you lost as computer choose scissors')}
+    }
+    function result_if_scissors(){
+      if(compmove==='rock'){alert('oops! you lost as computer choose rock')}
+      else if(compmove==='paper'){alert('congrats! you won as computer choose paper')}
+      else{alert('That\' a tie as computer choose scissors')}
+    }
   </script>
   
 </body>
