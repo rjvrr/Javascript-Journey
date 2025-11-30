@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+
+  <button>hello</button>
+  <button class="js-button">second button</button>
+
+  <script>
+    //document.body.innerHTML = 'This will rewrite everything on the page'
+
+    /*console.log(document.title);
+    document.title = "changed"; 
+
+    console.log(document.body); 
+    document.body.innerHTML = '<button>changed the previous content</button>'*/
+
+    console.log(document.querySelector('button'));
+
+    document.querySelector('button').innerHTML='changed'; //will only change the first button's html
+    document.querySelector('.js-button').innerHTML='changeddd' //will changed html of second button
+  </script>
+</body>
+</html>
