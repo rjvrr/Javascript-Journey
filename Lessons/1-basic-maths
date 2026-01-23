@@ -2,4 +2,4 @@ Js has issues with float numbers.
 
 0.1 + 0.2 will return 0.30000000000000004, so to solve this problem we will do (1+2)/10
 
-Js also provides a function to round the numbers --> Math.round(2.3) == 2 Math.round(2.8) == 3
+Js also provides a function to round the numbers --> Math.round(2.3) == 2 and Math.round(2.8) == 3

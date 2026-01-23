@@ -4,20 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Rock Paper Scissor game</title>
+  <style>
+    .rock-button , .paper-button, .scissor-button{
+      background-color: black;
+      color: white;
+      padding: 50px;
+      border-radius: 200px;
+      
+    }
+  </style>
 </head>
 
 <body>
   <p>Rock, Paper and Scissor Game</p>
 
-  <button onclick="playGame('rock')">
+  <button class='rock-button' onclick="playGame('rock')">
     Rock
   </button>
 
-  <button onclick="playGame('paper')">
+  <button class='paper-button' onclick="playGame('paper')">
     Paper
   </button>
 
-  <button onclick="playGame('scissor')"> 
+  <button class='scissor-button' onclick="playGame('scissor')"> 
     Scissor
   </button>
   <button onclick="
