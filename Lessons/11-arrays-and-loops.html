@@ -7,6 +7,7 @@
 </head>
 <body>
   <script>
+    //Arrays
     const myArray = [10,20,30];
     console.log(myArray);
 
@@ -24,6 +25,26 @@
     console.log(myArray);
 
     myArray.splice(0,1); //will remove an element 1st value is index and 2nd is number of elements at that index
+
+
+    //Loops
+    let i =1;
+    while(i<=5){
+      console.log(i);
+      i=i+1; //prints number form 1 to 5
+    }
+
+    for(let i=1 ; i<=5 ; i++){
+      console.log(i); //prints number form 1 to 5
+    }
+
+
+    //looping in array
+    const todoList = ['do dishes' , 'watch Tv' , 'play games', 'study'];
+     
+    for(let i = 0; i<todoList.length; i++){
+      console.log(todoList[i]);
+    }
   </script>
 </body>
 </html>
