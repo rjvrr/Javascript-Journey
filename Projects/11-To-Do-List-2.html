@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" placeholder="Enter task...">
+  <button class="add-task" onclick="fetchTask()">Add</button>
+  <div></div>
+
+  <script>
+    const taskArray = [];
+    function fetchTask(){
+      const demo = document.querySelector('input');
+      let RealTask = demo.value;
+      taskArray.push(RealTask);
+      demo.value = " "; 
+      printTask();
+    }
+    function printTask(){
+      let htmlCode ='';
+      for(let i = 0 ; i<taskArray.length ; i++){
+        let task = taskArray[i];
+        let html = `<p>${task}</p>`;
+        htmlCode = htmlCode+html;
+      }
+      document.querySelector('div').innerHTML=htmlCode;
+    }
+    
+  </script>
+</body>
+</html>
