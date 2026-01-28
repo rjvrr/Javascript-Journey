@@ -45,6 +45,22 @@
     for(let i = 0; i<todoList.length; i++){
       console.log(todoList[i]);
     }
+
+    /*advanced arrays
+    const array1 = [1,2,3]; //here array1 ki value [1,2,3] nhi hai, it is only pointing to [1,2,3] in the memory
+    const array2 = array1; // here array2 me array1 nhi hai, they both aree pointing to [1,2,3]
+    //hence any change in array2 will directly refelct in array1
+    array2.push(4);
+    console.log(array1);
+    console.log(array2); //both will display[1,2,3,4] because arrays are just references*/
+
+    //to prevent this use .slice()
+    const array1 = [1,2,3]; 
+    const array2 = array1.slice(); //now array2 has copy of array1 and both are pointing to different arrays
+
+
+    //array destructing
+    const [a,b] = [1,2];
   </script>
 </body>
 </html>
