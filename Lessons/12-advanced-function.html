@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script> 
+    //anonymous function (not preferred as not support hoisting)
+    const greeting = function() {  //stored funciton in a variable because functions are values
+      console.log("hello");
+    }
+    greeting();
+
+
+    //functions inside object i.e method
+    const obj1 = {
+      greet(){
+        console.log("hello1");
+      }
+    }
+    obj1.greet();
+
+
+    //setTimeout
+    setTimeout(function(){console.log("hello world")}, 3000); //this takes two parameters 1st is the function and 2nd the time..
+    //runs function for future, in this case it will execute this function after 3000ms and stop
+
+
+    //setInterval
+    setInterval(function(){console.log("hello world")}, 3000) //same two parameters as setTimeout
+    //this time it will run function after every 3000ms 
+  </script>
+  
+</body>
+</html>
