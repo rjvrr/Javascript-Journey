@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple to do list</title>
+  
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!--This will be the  most basic version of To Do list-->
+  <p>
+    To Do List Practice 1
+  </p>
+  <input class= "input-field" type="text" placeholder="Enter the task..." style="
+  border: 1px solid grey;
+  border-radius: 3px;">
+
+  <button class="Add-button" onclick="printTasks()">Add</button>
+
+  <script>
+    const Tasks=[];
+    function printTasks(){
+      const taskname = document.querySelector('.input-field');
+      let todo = taskname.value;
+
+      Tasks.push(todo);
+      console.log(Tasks);
+
+      taskname.value='';
+    }
+
+  </script>
+</body>
+</html>
