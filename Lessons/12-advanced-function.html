@@ -6,6 +6,8 @@
   <title>Document</title>
 </head>
 <body>
+  <button class="js-button">Click</button>
+
   <script> 
     //anonymous function (not preferred as not support hoisting)
     const greeting = function() {  //stored funciton in a variable because functions are values
@@ -24,13 +26,79 @@
 
 
     //setTimeout
-    setTimeout(function(){console.log("hello world")}, 3000); //this takes two parameters 1st is the function and 2nd the time..
+    /*setTimeout(function(){console.log("hello world")}, 3000); //this takes two parameters 1st is the function and 2nd the time..
     //runs function for future, in this case it will execute this function after 3000ms and stop
 
 
     //setInterval
-    setInterval(function(){console.log("hello world")}, 3000) //same two parameters as setTimeout
-    //this time it will run function after every 3000ms 
+    setInterval(function(){console.log("hello world")}, 3000); //same two parameters as setTimeout
+    //this time it will run function after every 3000ms*/
+
+
+    //another way to traverse an array
+    [
+      'wash dishes' , 
+      'play games' ,
+      'watch youTube'
+    ].forEach(function(value,index){
+        console.log(value,index); //value will return the element one by one and index returns the index
+    });
+
+
+    //arrow function -- just a shortcut way to write functions
+    /*const add = function(a, b) {
+      return a + b;
+    };*/
+    
+    //function = (parameters) => {operation}
+    const add = (a, b) => {
+      return a + b;
+    };
+    add();
+
+    const button = document.querySelector('.js-button');
+    const inform = () => {console.log('button clicked')};
+    button.addEventListener('click', inform)
+    /*taked two parameters i.e event and function.
+    /here click is the event, similer to onclick attribute 
+    /lets us add multiple events like:*/
+    button.addEventListener('click', () => {console.log('button clicked2')});
+
+    button.removeEventListener('click', inform); //to remove eventListerner
+
+
+    //filter()
+    [1,-2,5].filter((value, index) => {
+      return true; //all 3 values will be added to new array
+    });
+
+    [1,-2,5].filter((value, index) => {
+      return false; //values will not be added to new array
+    });
+
+    console.log([1,-2,5].filter((value, index) => {
+      /*if(value >= 0){
+        return true; //positive will be added to array
+      }
+      return false; //negative will not be added to new array*/
+      return value >= 0;
+    }));
+
+
+
+
+    //map()
+    [1,1,3].map((value,index) => {
+      return 10; //new array me teeno elements 10 honge
+    });
+
+    /*console.log([1,1,3].map((value,index) => {
+      return value*2; //new array me teeno elements double honge
+    }));*/
+    console.log([1,1,3].map( value => value*2 ));
+
+
+
   </script>
   
 </body>
